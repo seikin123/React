@@ -17,6 +17,7 @@ let element = React.createElement(
             'li', {}, "Second item"
           ),
           React.createElement(
+            
             'li', {}, "Third item"
           ),
         ]
