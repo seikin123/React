@@ -14,27 +14,26 @@
   <script type="text/babel">
   let dom = document.querySelector('#root');
 
-  const p = {
+  const msg = {
     fontSize: '20pt',
+    fontWeight: 'bold',
     padding: "10px",
-    backgroundColor:"red",
-    cursor:"pointer"
+    color: "white",
+    backgroundColor: "darkblue"
   };
 
-  var counter = 0;
+  // 関数コンポーネント
+  function Welcome(props) {
+    return <p style={msg}>Hello React!!</p>;
+  }
 
-  let doAction = (event) => {
-    counter++;
     let el = (
       <div>
-        <p onClick={doAction} style={p}>
-          count: {counter}
-        </p>
+        <Welcome />
       </div>
     );
     ReactDOM.render(el, dom);
-  };
-  doAction();
+    
   </script>
 </body>
 </html>
