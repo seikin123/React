@@ -14,32 +14,23 @@
   <script type="text/babel">
   let dom = document.querySelector('#root');
 
-
-  let message = "メッセージを表示します。";
-
-  const msg = {
-    fontSize:"20pt",
-    fontWeight: "bold",
-    color:"red",
-    border:"2px solid green"
+  const list = {
+    fontSize:"18pt",
+    padding: "5px 50px",
   }
 
-  let printMsg = function(msg, size, color) {
-    const style = {
-      fontSize: size + "pt",
-      fontWeight: '700',
-      color: color,
-      border: "1px solid " + color
-    };
-    return <p style={style}>{msg}</p>;
-  }
+  let data = [
+    <li>One</li>,
+    <li>Two</li>,
+    <li>Three</li>
+  ];
 
   let el = (
-    <div>
-      {printMsg('最初のメッセージ', 30, '#ddd')}
-      {printMsg('次のメッセージ', 20, '#aaa')}
-      {printMsg('最後のメッセージでした。', 14, '#333')}
-    </div>
+      <div>
+        <ul style = {list}>
+        {data}
+        </ul>
+      </div>
   );
     
   ReactDOM.render(el, dom);
